@@ -22,3 +22,34 @@ for fila in range(8):
         y2 = y1 + LADO_CASILLA
         color = COLOR_CASILLA_CLARA if (fila + columna) % 2 == 0 else COLOR_CASILLA_OSCURA
         lienzo.create_rectangle(x1, y1, x2, y2, fill=color)
+
+# Draw the tiles
+fichas = {
+    'r': '♜',
+    'n': '♞',
+    'b': '♝',
+    'q': '♛',
+    'k': '♚',
+    'p': '♟',
+    'R': '♖',
+    'N': '♘',
+    'B': '♗',
+    'Q': '♕',
+    'K': '♔',
+    'P': '♙'
+}
+
+posiciones_iniciales = {
+    'r': [(0, 0), (0, 7)],
+    'n': [(0, 1), (0, 6)],
+    'b': [(0, 2), (0, 5)],
+    'q': [(0, 3)],
+    'k': [(0, 4)],
+    'p': [(1, i) for i in range(8)],
+    'R': [(7, 0), (7, 7)],
+    'N': [(7, 1), (7, 6)],
+    'B': [(7, 2), (7, 5)],
+    'Q': [(7, 3)],
+    'K': [(7, 4)],
+    'P': [(6, i) for i in range(8)]
+}
