@@ -53,3 +53,11 @@ posiciones_iniciales = {
     'K': [(7, 4)],
     'P': [(6, i) for i in range(8)]
 }
+for pieza, posiciones in posiciones_iniciales.items():
+    for fila, columna in posiciones:
+        x = columna * LADO_CASILLA + LADO_CASILLA // 2
+        y = fila * LADO_CASILLA + LADO_CASILLA // 2
+        lienzo.create_text(x, y, text=fichas[pieza], font=('Arial', 32))
+
+# Start the window event loop
+ventana.mainloop()
